@@ -11,5 +11,11 @@ public class Main {
         s2.ajoute(s2.getHeuresTP(), 60);
         s2.ajoute(s2.getHeuresTD(), 30); // affiche "Trop d’heures"
         System.out.println(s2.heuresEqTDEffectuees()); // affiche "55"
+
+        ServicePermanentDecharge sd = new ServicePermanentDecharge(10);
+        sd.ajoute(sd.getHeuresCours(), 100);
+        sd.ajoute(sd.getHeuresTD(), 30);
+        sd.ajoute(sd.getHeuresTP(), 30);
+        System.out.println(sd.heuresEqTDEffectuees()); // affiche "180"
     }
 }
